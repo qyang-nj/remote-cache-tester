@@ -1,0 +1,8 @@
+# Bazel build outputs
+bazel-bin
+bazel-out
+bazel-testlogs
+MODULE.bazel.lock
+
+profile.json
+remote-cache-tester
