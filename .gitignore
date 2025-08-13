@@ -1,8 +1,5 @@
 # Bazel build outputs
-bazel-bin
-bazel-out
-bazel-testlogs
+bazel-*
 MODULE.bazel.lock
 
 profile.json
-remote-cache-tester
