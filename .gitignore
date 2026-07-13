@@ -3,3 +3,7 @@ bazel-*
 MODULE.bazel.lock
 
 profile.json
+remote.bazelrc
+
+__pycache__/
+*.py[cod]

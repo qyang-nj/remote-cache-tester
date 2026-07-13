@@ -6,3 +6,8 @@ build --remote_cache_compression=false
 
 # No sandbox to avoid extra overhead
 build --spawn_strategy=local
+
+# Ensure benchmark downloads are served by the remote cache.
+build:remote_cache_download --remote_download_outputs=all
+build:remote_cache_download --remote_upload_local_results=false
+build:remote_cache_download --experimental_remote_require_cached

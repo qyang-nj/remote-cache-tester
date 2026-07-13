@@ -14,3 +14,17 @@
         200,
     ]
 ]
+
+# Generate equal-sized files with distinct CAS digests for the concurrency test.
+[
+    genrule(
+        name = "File_50MB_{}".format(index),
+        outs = ["file50mb_{}.bin".format(index)],
+        cmd_bash = (
+            "set -e; " +
+            "dd if=/dev/zero of=$(@) bs=1024 count=51200; " +
+            "printf 'remote-cache-tester-{}' | dd of=$(@) conv=notrunc".format(index)
+        ),
+    )
+    for index in range(1, 9)
+]
